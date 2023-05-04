@@ -37,7 +37,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { UsersadminComponent } from './front/backoffice/components/usersadmin/usersadmin.component'
+import { UsersadminComponent } from './front/backoffice/components/usersadmin/usersadmin.component';
+import { AffichageComponent } from './front/event/affichage/affichage.component'
 
 
 
@@ -58,6 +59,8 @@ import { UsersadminComponent } from './front/backoffice/components/usersadmin/us
     FooterComponent,
     BackofficeComponent,
     UsersadminComponent,
+    AffichageComponent,
+ 
    
 
  

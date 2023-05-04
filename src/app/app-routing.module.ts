@@ -27,6 +27,7 @@ const routes: Routes = [
  
 ]},
 {path:'admin',component:BackofficeComponent,canActivate:[AdminGuard],children:[
+  {path:'',redirectTo:'user',pathMatch:"full"},
   {path:'user',component:UsersadminComponent},
   {path:'event',component:EventcrudComponent}]},
 {path:'forgotpassword',component:ForgotpasswordComponent},

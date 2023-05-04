@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 
 
+
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormGroup } from '@angular/forms'
 
@@ -48,6 +49,7 @@ export class EventcrudComponent implements OnInit {
   }
  
   ngOnInit(): void {
+  
   }
  
   getAllEvent()
