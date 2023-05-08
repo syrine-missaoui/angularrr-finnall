@@ -21,5 +21,15 @@ export class UserGuard implements CanActivate {
     
   }
   
+  cansubscribe():number{
+
+    const decodeedtoken = this.jwt.decodeToken(localStorage.getItem('token') || '');
+    
+
+      return decodeedtoken.Id;
+    
+    
+  }
+  
   
 }

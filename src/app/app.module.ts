@@ -38,7 +38,17 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { UsersadminComponent } from './front/backoffice/components/usersadmin/usersadmin.component';
-import { AffichageComponent } from './front/event/affichage/affichage.component'
+import { AffichageComponent } from './front/event/affichage/affichage.component';
+import { AddJobComponent } from './front/backoffice/job/add-job/add-job.component';
+import { DisplayJobComponent } from './front/backoffice/job/display-job/display-job.component';
+import { AddFormationComponent } from './front/backoffice/formation/add-formation/add-formation.component';
+import { DisplayFormationComponent } from './front/backoffice/formation/display-formation/display-formation.component';
+import { EndnavComponent } from './front/backoffice/endnav/endnav.component';
+
+import { AddSkillComponent } from './front/backoffice/skills/add-skill/add-skill.component';
+import { DisplaySkillComponent } from './front/backoffice/skills/display-skill/display-skill.component';
+import { DisplayFrontFormationComponent } from './front/backoffice/formation/display-front-formation/display-front-formation.component';
+import { DisplayFrontJobComponent } from './front/backoffice/job/display-front-job/display-front-job.component'
 
 
 
@@ -60,6 +70,17 @@ import { AffichageComponent } from './front/event/affichage/affichage.component'
     BackofficeComponent,
     UsersadminComponent,
     AffichageComponent,
+    AddJobComponent,
+    DisplayJobComponent,
+    AddFormationComponent,
+    DisplayFormationComponent,
+    EndnavComponent,
+  
+
+    AddSkillComponent,
+    DisplaySkillComponent,
+    DisplayFrontFormationComponent,
+    DisplayFrontJobComponent,
  
    
 
