@@ -23,7 +23,7 @@
         <ul>
           <li><a class="nav-link scrollto active" routerLink="User" routerLinkActive="active">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#about">Blog</a></li>
+          <li><a class="nav-link scrollto" [hidden]="hidelink" routerLink="articles">Blog</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a [hidden]="hidelink"  routerLink="products">Products</a></li>
           <li><a class="nav-link scrollto" [hidden]="hidelink" routerLink="/shop" routerLinkActive="active">Shop</a></li>
@@ -44,6 +44,6 @@
       <a [hidden]="!hidelink" href="" routerLink="/register" class="appointment-btn scrollto" routerLinkActive="active"><span class="d-none d-md-inline">Sign</span> Up</a>
       <a [hidden]="!hidelink" href="" routerLink="/login" class="appointment-btn scrollto" routerLinkActive="active"><span class="d-none d-md-inline">Sign</span> In</a>
       <a [hidden]="hidelink" href="" (click)="logout()" class="appointment-btn scrollto" routerLinkActive="active"><span class="d-none d-md-inline">Log</span> Out</a>
-      <a [hidden]="hidelink" href=""  routerLink="/profile"  class="appointment-btn scrollto" routerLinkActive="active"><span class="d-none d-md-inline">Profile <i class="fas fa-user" style="color: #ffffff;"></i></span></a>
+      <a [hidden]="hidelink" href=""  routerLink="profile"  class="appointment-btn scrollto" routerLinkActive="active"><span class="d-none d-md-inline">Profile <i class="fas fa-user" style="color: #ffffff;"></i></span></a>
     </div>
   </header><!-- End Header -->

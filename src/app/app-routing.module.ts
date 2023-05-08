@@ -13,6 +13,9 @@ import { UserGuard } from './front/guards/user.guard';
 import { BackofficeComponent } from './front/backoffice/backoffice.component';
 import { ProfileComponent } from './front/profile/profile.component';
 import { AdminuserComponent } from './front/backoffice/components/adminuser/adminuser.component';
+import { BlogComponent } from './front/app-body/components/blog/blog.component';
+import { BlogDetailComponent } from './front/app-body/components/blog/blog-detail/blog-detail.component';
+import { ArticleAdminComponent } from './front/backoffice/components/article-admin/article-admin.component';
 
 
 
@@ -23,15 +26,23 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'register',component:RegisterComponent},
 {path:'app',component:AppBodyComponent,canActivate:[UserGuard],children:[
+  {path:'profile',component:ProfileComponent},
+  {path: 'articles' , component:BlogComponent},
+ 
+  {path : 'articlesdetail/:idartcile',component:BlogDetailComponent},
     //components of inside the app "product,event,formation..."
      
 ]},
   {path:'admin',component:BackofficeComponent,canActivate:[AdminGuard],children:[
     {path:'',redirectTo:'User',pathMatch:'full'},
-    {path:'User',component:AdminuserComponent}
+    {path:'profile',component:ProfileComponent},
+    {path:'User',component:AdminuserComponent},
+    {path:'articles',component:ArticleAdminComponent},
+    
   ]},
+
 {path:'forgotpassword',component:ForgotpasswordComponent},
-{path:'profile',component:ProfileComponent},
+
 {path:'notfound',component:NotFoundComponent},
 {path:'**',component:NotFoundComponent}
 

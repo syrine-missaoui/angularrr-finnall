@@ -23,6 +23,26 @@ import { FooterComponent } from './front/footer/footer.component';
 import { BackofficeComponent } from './front/backoffice/backoffice.component';
 import { ProfileComponent } from './front/profile/profile.component';
 import { AdminuserComponent } from './front/backoffice/components/adminuser/adminuser.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlogComponent } from './front/app-body/components/blog/blog.component';
+import { ArticleAdminComponent, PopupAdd } from './front/backoffice/components/article-admin/article-admin.component';
+import { BlogDetailComponent } from './front/app-body/components/blog/blog-detail/blog-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 
@@ -42,6 +62,10 @@ import { AdminuserComponent } from './front/backoffice/components/adminuser/admi
     BackofficeComponent,
     ProfileComponent,
     AdminuserComponent,
+    BlogComponent,
+    ArticleAdminComponent,
+    BlogDetailComponent,
+    PopupAdd
     
    
 
@@ -49,6 +73,30 @@ import { AdminuserComponent } from './front/backoffice/components/adminuser/admi
  
   ],
   imports: [
+    MatStepperModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSortModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -64,7 +112,8 @@ import { AdminuserComponent } from './front/backoffice/components/adminuser/admi
         },
         allowedDomains: ['localhost'],
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
