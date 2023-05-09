@@ -37,16 +37,4 @@ export class UserServiceService {
     const token = localStorage.getItem('token');
     return this.http.post(`${this.baseUrl}/user/Updaterole`,data,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
   }
-  getUserDetails(id: string){
-    const token = localStorage.getItem('token');
-    return this.http.get(`${this.baseUrl}/user/get/${id}`,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
-  }
-  changePassword(data:any){
-    const token = localStorage.getItem('token');
-    return this.http.post(`${this.baseUrl}/user/changePassword`,data,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
-  }
-  updateProfile(data:any,id:string){
-    const token = localStorage.getItem('token');
-    return this.http.post(`${this.baseUrl}/user/updateProfile/${id}`,data,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
-  }
 }

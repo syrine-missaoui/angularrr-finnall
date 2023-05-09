@@ -21,12 +21,11 @@ import { NotFoundComponent } from './front/not-found/not-found.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FooterComponent } from './front/footer/footer.component';
 import { BackofficeComponent } from './front/backoffice/backoffice.component';
-import { ProfileComponent } from './front/profile/profile.component';
-import { AdminuserComponent } from './front/backoffice/components/adminuser/adminuser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BlogComponent } from './front/app-body/components/blog/blog.component';
-import { ArticleAdminComponent, PopupAdd } from './front/backoffice/components/article-admin/article-admin.component';
-import { BlogDetailComponent } from './front/app-body/components/blog/blog-detail/blog-detail.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { EventcrudComponent } from './front/backoffice/eventcrud/eventcrud.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -38,17 +37,26 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatStepperModule} from '@angular/material/stepper';
+import { UsersadminComponent } from './front/backoffice/components/usersadmin/usersadmin.component';
+import { AffichageComponent } from './front/event/affichage/affichage.component';
+import { AddJobComponent } from './front/backoffice/job/add-job/add-job.component';
+import { DisplayJobComponent } from './front/backoffice/job/display-job/display-job.component';
+import { AddFormationComponent } from './front/backoffice/formation/add-formation/add-formation.component';
+import { DisplayFormationComponent } from './front/backoffice/formation/display-formation/display-formation.component';
+import { EndnavComponent } from './front/backoffice/endnav/endnav.component';
+
+import { AddSkillComponent } from './front/backoffice/skills/add-skill/add-skill.component';
+import { DisplaySkillComponent } from './front/backoffice/skills/display-skill/display-skill.component';
+import { DisplayFrontFormationComponent } from './front/backoffice/formation/display-front-formation/display-front-formation.component';
+import { DisplayFrontJobComponent } from './front/backoffice/job/display-front-job/display-front-job.component'
 
 
 
 
 @NgModule({
   declarations: [
+    
+    EventcrudComponent,
     AppComponent,
     HomeComponent,
     HeaderComponent,
@@ -60,20 +68,26 @@ import {MatStepperModule} from '@angular/material/stepper';
     NotFoundComponent,
     FooterComponent,
     BackofficeComponent,
-    ProfileComponent,
-    AdminuserComponent,
-    BlogComponent,
-    ArticleAdminComponent,
-    BlogDetailComponent,
-    PopupAdd
-    
+    UsersadminComponent,
+    AffichageComponent,
+    AddJobComponent,
+    DisplayJobComponent,
+    AddFormationComponent,
+    DisplayFormationComponent,
+    EndnavComponent,
+  
+
+    AddSkillComponent,
+    DisplaySkillComponent,
+    DisplayFrontFormationComponent,
+    DisplayFrontJobComponent,
+ 
    
 
  
  
   ],
   imports: [
-    MatStepperModule,
     MatSnackBarModule,
     MatPaginatorModule,
     MatTableModule,
@@ -87,16 +101,16 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
+    FormsModule,
     MatIconModule,
     MatToolbarModule,
     MatSelectModule,
     MatRadioModule,
     MatDatepickerModule,
+    MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
     MatSortModule,
-    MatTabsModule,
-    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
