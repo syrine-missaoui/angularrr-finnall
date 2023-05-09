@@ -24,7 +24,7 @@ export class SkillService {
 
   savejobtouser(skill: any,id: number) {
     const token = localStorage.getItem('token');
-    return this.httpClient.post<any>(`${this.SERVER_URL}/skills/savejobtouser/${id}`, skill,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})});}
+    return this.httpClient.post<any>(`${this.SERVER_URL}/skills/saveSkilltouser/${id}`, skill,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})});}
 
     getskillbyuser(id: number) {
       const token = localStorage.getItem('token');

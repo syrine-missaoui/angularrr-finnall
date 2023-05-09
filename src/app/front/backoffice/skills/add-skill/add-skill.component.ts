@@ -40,6 +40,9 @@ skill:Skill =new Skill ;
     
     
   }
+  refreshPage() {
+    location.reload(); // Use the location.reload() method to refresh the page
+  }
 
   submitJob() {
     const decodeedtoken = this.jwt.decodeToken(localStorage.getItem('token') || '');
@@ -52,10 +55,12 @@ skill:Skill =new Skill ;
     this.skillService.savejobtouser(this.skillForm.value,num).subscribe(
       job => {
         console.log(" success ")
+        
         this.toastr.success(
           'job a été créer ' ,
           'Succès',
           { timeOut: 5000 })
+          this.refreshPage();
       },
       
       error => {

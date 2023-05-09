@@ -1,7 +1,7 @@
 
-
+<app-add-skill></app-add-skill>
     <body>
-    <div class="bodyDash" style="margin-top: 18rem;">
+    <div class="bodyDash" >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -13,12 +13,7 @@
                                 <table class="table  mb-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="flexCheckDefault" />
-                                                </div>
-                                            </th>
+                                           
                                             <th scope="col">title</th>
                                      
                                            
@@ -27,12 +22,7 @@
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let data of filteredJob">
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="flexCheckDefault1" checked />
-                                                </div>
-                                            </th>
+                                            
                                             <td>{{data.name}}</td>
                                        
                                         

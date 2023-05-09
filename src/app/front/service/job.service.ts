@@ -29,6 +29,14 @@ export class JobService {
     const token = localStorage.getItem('token');
     return this.httpClient.post(`${this.SERVER_URL}/jobs/delete/${id}`,null,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
   }
+  assignsuerTojob(iduser:number,idjob:number){
+    const token = localStorage.getItem('token');
+    return this.httpClient.post(`${this.SERVER_URL}/jobs/jobtouser/${iduser}/${idjob}`,null,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
+  }
+  getsuerbyjob(iduser:number){
+    const token = localStorage.getItem('token');
+    return this.httpClient.post(`${this.SERVER_URL}/jobs/getjobbyuser/${iduser}`,null,{headers:new HttpHeaders({'Content-Type' : 'application/json', 'Authorization' : `Bearer ${token}`})})
+  }
   getjobByformation(typeobjet: any): Observable<any[]> {
     return this.httpClient.get<any>(`${this.SERVER_URL +'/searchjobs'}/${typeobjet}`);
   }
