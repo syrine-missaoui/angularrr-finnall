@@ -11,13 +11,16 @@ import { NotFoundComponent } from './front/not-found/not-found.component';
 import { TestComponentRenderer } from '@angular/core/testing';
 import { UserGuard } from './front/guards/user.guard';
 import { BackofficeComponent } from './front/backoffice/backoffice.component';
-import { ProfileComponent } from './front/profile/profile.component';
-import { AdminuserComponent } from './front/backoffice/components/adminuser/adminuser.component';
-import { BlogComponent } from './front/app-body/components/blog/blog.component';
-import { BlogDetailComponent } from './front/app-body/components/blog/blog-detail/blog-detail.component';
-import { ArticleAdminComponent } from './front/backoffice/components/article-admin/article-admin.component';
-
-
+import { EventcrudComponent } from './front/backoffice/eventcrud/eventcrud.component';
+import { UsersadminComponent } from './front/backoffice/components/usersadmin/usersadmin.component';
+import { AddFormationComponent } from './front/backoffice/formation/add-formation/add-formation.component';
+import { AddJobComponent } from './front/backoffice/job/add-job/add-job.component';
+import { AddSkillComponent } from './front/backoffice/skills/add-skill/add-skill.component';
+import { DisplaySkillComponent } from './front/backoffice/skills/display-skill/display-skill.component';
+import { DisplayJobComponent } from './front/backoffice/job/display-job/display-job.component';
+import { DisplayFrontJobComponent } from './front/backoffice/job/display-front-job/display-front-job.component';
+import { DisplayFormationComponent } from './front/backoffice/formation/display-formation/display-formation.component';
+import { DisplayFrontFormationComponent } from './front/backoffice/formation/display-front-formation/display-front-formation.component';
 
 const routes: Routes = [
 //General empty page and its children FRONT
@@ -26,29 +29,26 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'register',component:RegisterComponent},
 {path:'app',component:AppBodyComponent,canActivate:[UserGuard],children:[
-  {path:'profile',component:ProfileComponent},
-  {path: 'articles' , component:BlogComponent},
+  //components of inside the app "product,event,formation..."
  
-  {path : 'articlesdetail/:idartcile',component:BlogDetailComponent},
-    //components of inside the app "product,event,formation..."
-     
 ]},
-  {path:'admin',component:BackofficeComponent,canActivate:[AdminGuard],children:[
-    {path:'',redirectTo:'User',pathMatch:'full'},
-    {path:'profile',component:ProfileComponent},
-    {path:'User',component:AdminuserComponent},
-    {path:'articles',component:ArticleAdminComponent},
-    
-  ]},
-
+{path:'admin',component:BackofficeComponent,canActivate:[AdminGuard],children:[
+  {path:'',redirectTo:'user',pathMatch:"full"},
+  {path:'user',component:UsersadminComponent},
+  {path:'event',component:EventcrudComponent},
+  {path:'job',component:AddJobComponent},
+  {path:'formation',component:AddFormationComponent},
+  {path:'viewformation',component:DisplayFormationComponent},
+  {path:'viewjob',component:DisplayJobComponent}]},
 {path:'forgotpassword',component:ForgotpasswordComponent},
 
+{path:'viewfrontformation',component:DisplayFrontFormationComponent},
+{path:'viewfrontjob',component:DisplayFrontJobComponent},
+{path:'viewskill',component:DisplaySkillComponent},
+{path:'skill',component:AddSkillComponent},
 {path:'notfound',component:NotFoundComponent},
 {path:'**',component:NotFoundComponent}
-
-
-];   
-
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
